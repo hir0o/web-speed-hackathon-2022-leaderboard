@@ -32,6 +32,7 @@ jobs:
           result-encoding: json
           script: |
             const payload = require('/tmp/payload.json');
+            console.log(payload);
             return payload;
       - name: Check competition status
         uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e # renovate: tag=v6.0.0
@@ -78,6 +79,7 @@ jobs:
           result-encoding: json
           script: |
             const payload = require('./scripts/vrt/tmp/reg.json');
+            console.log(payload);
             return payload;
       - name: Read result
         uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e # renovate: tag=v6.0.0
